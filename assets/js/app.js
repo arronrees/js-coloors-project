@@ -12,6 +12,9 @@ const sliderContainers = document.querySelectorAll('.sliders');
 
 let initialColors;
 
+// Local Storage
+let savedPalettes = [];
+
 // Event Listeners
 generateBtn.addEventListener('click', randomColors);
 
@@ -222,6 +225,29 @@ function lockColor(index) {
   colorDivs[index].classList.toggle('locked');
   lockButton[index].children[0].classList.toggle('fa-lock-open');
   lockButton[index].children[0].classList.toggle('fa-lock');
+}
+
+// Save Palette to local storage
+
+const saveBtn = document.querySelector('.save');
+const submitSave = document.querySelector('.submit-save');
+const closeSave = document.querySelector('.close-save');
+const saveContainer = document.querySelector('.save-container');
+const saveInput = document.querySelector('.save-container input');
+
+saveBtn.addEventListener('click', openPalette);
+closeSave.addEventListener('click', closePalette);
+
+function openPalette(e) {
+  const popup = saveContainer.children[0];
+  saveContainer.classList.add('active');
+  popup.classList.add('active');
+}
+
+function closePalette(e) {
+  const popup = saveContainer.children[0];
+  saveContainer.classList.remove('active');
+  popup.classList.remove('active');
 }
 
 randomColors();
