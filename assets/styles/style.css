@@ -188,7 +188,7 @@ input[type='range'] {
 .submit-save {
   margin: 2rem;
   padding: 1rem 3rem;
-  background: lightslategray;
+  background: rgb(31, 33, 63);
   border: none;
   color: white;
   cursor: pointer;
