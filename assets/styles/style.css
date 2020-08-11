@@ -194,3 +194,46 @@ input[type='range'] {
   cursor: pointer;
   border-radius: 0.5rem;
 }
+
+.library-popup {
+  min-width: 40%;
+  padding: 1rem;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  max-height: 50vh;
+}
+
+.custom-palette {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+}
+
+.custom-palette h4 {
+  width: 10rem;
+  padding-left: 2rem;
+}
+
+.small-preview {
+  display: flex;
+  flex: 1;
+  max-width: 15vw;
+}
+
+.small-preview div {
+  height: 5rem;
+  flex: 1;
+}
+
+.custom-palette button {
+  font-size: 1.25rem;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  background: rgb(31, 33, 63);
+  color: white;
+  cursor: pointer;
+  border-radius: 1rem;
+  border: none;
+}
