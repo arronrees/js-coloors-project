@@ -264,8 +264,17 @@ function savePalette(e) {
   currentHexes.forEach((hex) => {
     colors.push(hex.innerText);
   });
+
   // Generate object
-  let paletteNr = savedPalettes.length;
+
+  let paletteNr;
+  const paletteObjects = JSON.parse(localStorage.getItem('palettes'));
+  if (paletteObjects) {
+    paletteNr = paletteObjects.length;
+  } else {
+    paletteNr = savedPalettes.length;
+  }
+
   const paletteObj = { name, colors, nr: paletteNr };
   savedPalettes.push(paletteObj);
   // Save to local storage
@@ -298,6 +307,7 @@ function savePalette(e) {
       const text = colorDivs[index].children[0];
       checkTextContrast(color, text);
       updateTextUI(index);
+      libraryUpdate(color, index);
     });
     resetInputs();
   });
@@ -332,9 +342,10 @@ function closeLibrary() {
 
 function getLocal() {
   if (localStorage.getItem('palettes') === null) {
-    localStorage = [];
+    localPalettes = [];
   } else {
     const paletteObjects = JSON.parse(localStorage.getItem('palettes'));
+    savedPalettes = [...paletteObjects];
     paletteObjects.forEach((paletteObj) => {
       const palette = document.createElement('div');
       palette.classList.add('custom-palette');
@@ -362,6 +373,7 @@ function getLocal() {
           const text = colorDivs[index].children[0];
           checkTextContrast(color, text);
           updateTextUI(index);
+          libraryUpdate(color, index);
         });
         resetInputs();
       });
@@ -372,6 +384,20 @@ function getLocal() {
       libraryContainer.children[0].appendChild(palette);
     });
   }
+}
+
+function libraryUpdate(color, index) {
+  const c = chroma(color);
+  const hue = sliderContainers[index].querySelectorAll(
+    "input[type='range']"
+  )[0];
+  const brighanesss = sliderContainers[index].querySelectorAll(
+    "input[type='range']"
+  )[1];
+  const saturation = sliderContainers[index].querySelectorAll(
+    "input[type='range']"
+  )[2];
+  colorizeSliders(c, hue, brighanesss, saturation);
 }
 
 getLocal();
