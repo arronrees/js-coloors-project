@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coloors Project</title>
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/83ba9deb1d.js" crossorigin="anonymous"></script>
     <!-- CSS -->
@@ -27,7 +28,13 @@
                 <button class="lock"><i class="fas fa-lock-open"></i></button>
             </div>
             <div class="sliders">
-                <button class="close-adjustment">X</button>
+                <button class="close-adjustment">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+                    </svg>
+                </button>
                 <span>Hue</span>
                 <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="0">
                 <span>Brightness</span>
@@ -43,7 +50,13 @@
                 <button class="lock"><i class="fas fa-lock-open"></i></button>
             </div>
             <div class="sliders">
-                <button class="close-adjustment">X</button>
+                <button class="close-adjustment">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+                    </svg>
+                </button>
                 <span>Hue</span>
                 <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="1">
                 <span>Brightness</span>
@@ -59,7 +72,13 @@
                 <button class="lock"><i class="fas fa-lock-open"></i></button>
             </div>
             <div class="sliders">
-                <button class="close-adjustment">X</button>
+                <button class="close-adjustment">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+                    </svg>
+                </button>
                 <span>Hue</span>
                 <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="2">
                 <span>Brightness</span>
@@ -75,7 +94,13 @@
                 <button class="lock"><i class="fas fa-lock-open"></i></button>
             </div>
             <div class="sliders">
-                <button class="close-adjustment">X</button>
+                <button class="close-adjustment">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+                    </svg>
+                </button>
                 <span>Hue</span>
                 <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="3">
                 <span>Brightness</span>
@@ -91,7 +116,13 @@
                 <button class="lock"><i class="fas fa-lock-open"></i></button>
             </div>
             <div class="sliders">
-                <button class="close-adjustment">X</button>
+                <button class="close-adjustment">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                        <path d="M0 0h24v24H0V0z" fill="none" />
+                        <path
+                            d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+                    </svg>
+                </button>
                 <span>Hue</span>
                 <input type="range" min="0" max="360" step="1" name="hue" class="hue-input" data-hue="4">
                 <span>Brightness</span>
@@ -103,15 +134,15 @@
     </div>
     <div class="panel">
         <div class="library-panel">
-            <button class="library"><i class="fas fa-book-open"></i></button>
+            <button class="library"><img src="./assets/img/book-open.svg"></button>
             <p>Library</p>
         </div>
         <div class="generate-panel">
-            <button class="generate"><i class="fas fa-sync"></i></button>
+            <button class="generate"><img src="./assets/img/sync.svg"></button>
             <p>Generate</p>
         </div>
         <div class="save-panel">
-            <button class="save"><i class="fas fa-save"></i></button>
+            <button class="save"><img src="./assets/img/save.svg"></button>
             <p>Save</p>
         </div>
     </div>
@@ -124,15 +155,27 @@
     </div>
     <div class="save-container">
         <div class="save-popup">
-            <button class="close-save">X</button>
-            <h4>Give your pallete a name</h4>
+            <button class="close-save">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+                </svg>
+            </button>
+            <h4>Name your pallete</h4>
             <input type="text" maxlength="15" class="save-name">
             <button type="submit" class="submit-save">Save</button>
         </div>
     </div>
     <div class="library-container">
         <div class="library-popup">
-            <button class="close-library">X</button>
+            <button class="close-library">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M0 0h24v24H0V0z" fill="none" />
+                    <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" />
+                </svg>
+            </button>
             <h4>Pick your pallete</h4>
         </div>
     </div>

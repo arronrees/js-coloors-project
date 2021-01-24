@@ -5,12 +5,18 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 0.1rem;
   color: rgb(51, 51, 51);
+  background-color: rgb(22, 22, 22);
+  overflow: hidden;
 }
 
 button {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Rajdhani', sans-serif;
+  outline: none;
+  border: none;
+  letter-spacing: 0.1rem;
 }
 
 path,
@@ -21,8 +27,11 @@ svg {
 
 .colors {
   min-height: 80vh;
+  width: calc(100vw - 1rem);
+  margin: 0.5rem auto;
   display: flex;
   color: rgb(212, 212, 212);
+  gap: 0.5rem;
 }
 
 .color {
@@ -34,11 +43,18 @@ svg {
   justify-content: space-evenly;
   position: relative;
   overflow: hidden;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.color svg {
+  width: 1rem;
+  height: 1rem;
 }
 
 .color h2 {
   font-size: 2rem;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .sliders {
@@ -49,19 +65,19 @@ svg {
   background: rgb(255, 255, 255);
   padding: 1rem;
   width: 80%;
-  border-top-right-radius: 1rem;
-  border-top-left-radius: 1rem;
+  border-radius: 5px;
   pointer-events: none;
   opacity: 0;
+  color: black;
 
   /* Adding adjustment class */
   transform: translateY(100px);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .sliders.active {
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(-50px);
   pointer-events: all;
 }
 
@@ -72,10 +88,9 @@ svg {
   top: 0;
   right: 0;
   padding: 0.5rem;
-  border-top-right-radius: 1rem;
+  border-top-right-radius: 5px;
   border: none;
-  background: rgb(70, 70, 70);
-  color: white;
+  outline: none;
   cursor: pointer;
 }
 
@@ -92,18 +107,20 @@ svg {
 }
 
 .panel button {
-  font-size: 1.25rem;
   margin: 1rem;
   padding: 1rem 2rem;
-  background: rgb(31, 33, 63);
+  background: rgb(255, 255, 255);
   color: white;
   cursor: pointer;
-  border-radius: 1rem;
+  border-radius: 5px;
   border: none;
+  outline: none;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
 .panel p {
   font-size: 1.25rem;
+  color: white;
 }
 
 .library-panel,
@@ -130,8 +147,10 @@ input[type='range'] {
   margin: 1rem 0;
   width: 100%;
   position: relative;
-  border-radius: 1rem;
+  border-radius: 5px;
   cursor: pointer;
+  outline: none;
+  border: none;
 }
 
 .copy-container,
@@ -159,7 +178,7 @@ input[type='range'] {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-radius: 2rem;
+  border-radius: 5px;
   transition: transform 1s ease;
   transform: translateY(-2rem);
   min-width: 30%;
@@ -188,19 +207,23 @@ input[type='range'] {
 .submit-save {
   margin: 2rem;
   padding: 1rem 3rem;
-  background: rgb(31, 33, 63);
+  background: rgb(22, 22, 22);
   border: none;
   color: white;
   cursor: pointer;
-  border-radius: 0.5rem;
+  border-radius: 5px;
 }
 
 .library-popup {
   min-width: 40%;
   padding: 1rem;
   justify-content: flex-start;
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 50vh;
+}
+
+.library-popup::-webkit-scrollbar {
+  display: none;
 }
 
 .custom-palette {
@@ -228,12 +251,11 @@ input[type='range'] {
 }
 
 .custom-palette button {
-  font-size: 1.25rem;
   margin: 1rem;
   padding: 1rem 2rem;
-  background: rgb(31, 33, 63);
+  background: rgb(22, 22, 22);
   color: white;
   cursor: pointer;
-  border-radius: 1rem;
+  border-radius: 5px;
   border: none;
 }
